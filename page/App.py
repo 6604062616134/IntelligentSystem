@@ -2,6 +2,7 @@ import streamlit as st
 from home import home
 from machine_learning import machine_learning
 from demo import demo
+
 from NN import Neural_Network_Model
 import os
 from pathlib import Path
