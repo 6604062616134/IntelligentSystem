@@ -64,8 +64,8 @@ def modele():
             temp_file.close()
             audio_path = temp_file.name
     
-    if not audio_path:
-        st.warning("กรุณาเลือกประเภทเสียงหรืออัพโหลดไฟล์เสียง")
+    if not audio_path or not os.path.exists(audio_path):
+        st.warning("กรุณาเลือกประเภทเสียงหรืออัพโหลดไฟล์เสียงให้ถูกต้อง")
         return
     
     mel_spec = extract_features(audio_path)
