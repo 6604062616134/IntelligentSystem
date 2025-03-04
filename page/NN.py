@@ -10,7 +10,8 @@ import tempfile
 
 
     
-MODEL_URL = 'https://drive.google.com/file/d/1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d/view?usp=drive_link'
+MODEL_URL = 'https://drive.google.com/uc?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d'
+
 
 base = Path(__file__).parent.parent / "NN"
 model = base / "model.h5"
