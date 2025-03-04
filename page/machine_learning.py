@@ -40,7 +40,7 @@ def machine_learning():
     st.markdown('<div class="highlight">ความเร็วลม (Wind Speed)</div>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent"> ข้อมูลความเร็วลมมีบทบาทสำคัญในการพยากรณ์อุณหภูมิ เนื่องจากลมมีผลต่อการกระจายความร้อนในอากาศ เช่น ลมเย็นอาจลดอุณหภูมิในพื้นที่หนึ่งได้หรือช่วยให้ลมร้อนขึ้นในบางพื้นที่ ข้อมูลนี้สามารถนำไปใช้ในการคำนวณหาความรู้สึกของอุณหภูมิที่แท้จริง (Wind Chill) หรือแม้กระทั่งการทำนายปรากฏการณ์อากาศเช่นพายุ การนำข้อมูลนี้มาใช้ในการวิเคราะห์จะทำให้ระบบสามารถพยากรณ์ได้แม่นยำยิ่งขึ้น</div><br>', unsafe_allow_html=True)
    
-    st.markdown('<div class="big-font">การเตรียมข้อมูล (Data Preprocessing) </div>', unsafe_allow_html=True)
+   
    
     
     st.markdown('<div class="big-font">การจัดการข้อมูลและการเลือกเทคนิคการวิเคราะห์ </div>', unsafe_allow_html=True)
