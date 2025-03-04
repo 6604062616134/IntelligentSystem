@@ -41,7 +41,7 @@ def extract_features(audio_file):
 
 # ฟังก์ชันทำนายเสียง
 def modele():
-    file_path = Path(__file__).parent / "data NN"
+    file_path = Path(__file__).parent.parent / "data NN"
     file_cat = file_path / "cat_115.wav"
     file_dog = file_path / "dog_barking_46.wav"
     st.title("ทดสอบการทำนายเสียงแมวและหมา")
@@ -87,9 +87,9 @@ def modele():
         dog_prob = (1 - prediction) * 100
         
         if cat_prob > dog_prob:
-            st.image("https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg", caption="แมว", use_container_width=True)
+            st.image("https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg", caption="แมว")
         else:
-            st.image("https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*", caption="หมา", use_container_width=True)
+            st.image("https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*", caption="หมา")
     
     except Exception as e:
         st.error(f"เกิดข้อผิดพลาดในการทำนายเสียง: {str(e)}")
