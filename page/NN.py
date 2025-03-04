@@ -118,6 +118,7 @@ def modele():
 
 
 def Neural_Network_Model():
+    st.title("Neural Network Model")
     st.title("การทำนายเสียงแมวและหมา")
     modele()
-    st.title("Neural Network Model")
+    
