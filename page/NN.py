@@ -27,9 +27,7 @@ except Exception as e:
     st.error(f"เกิดข้อผิดพลาดในการโหลดโมเดล: {str(e)}")
     st.stop()
 
-file_path = Path(__file__).parent.parent / "data NN"
-file_cat = file_path / "cat_115.wav"
-file_dog = file_path / "dog_barking_46.wav"
+
 # ฟังก์ชันโหลดเสียงและแปลงเป็น Mel Spectrogram
 def extract_features(audio_file):
     try:
@@ -43,6 +41,9 @@ def extract_features(audio_file):
 
 # ฟังก์ชันทำนายเสียง
 def modele():
+    file_path = Path(__file__).parent.parent / "data NN"
+    file_cat = file_path / "cat_115.wav"
+    file_dog = file_path / "dog_barking_46.wav"
     st.title("ทดสอบการทำนายเสียงแมวและหมา")
     
     audio_option = st.selectbox(
