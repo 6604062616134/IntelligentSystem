@@ -14,6 +14,9 @@ MODEL_URL = 'https://drive.google.com/uc?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d'
 base = Path(__file__).parent / "NN"
 model_path = base / "model.h5"
 
+file_path = Path(__file__).parent.parent / "data NN"
+file_cat = file_path / "cat_115.wav"
+file_dog = file_path / "dog_barking_46.wav"
 # ตรวจสอบว่ามีโมเดลอยู่หรือไม่ ถ้าไม่มีให้ดาวน์โหลด
 if not model_path.exists():
     os.makedirs(base, exist_ok=True)
@@ -48,10 +51,14 @@ def modele():
     
     audio_path = None  # กำหนดค่าเริ่มต้น
     
-    if audio_option == "เลือกไฟล์ของคุณเอง":
+    if audio_option == "Cat":
+        audio_path = str(file_cat)
+    elif audio_option == "Dog":
+        audio_path = str(file_dog)
+    elif audio_option == "เลือกไฟล์ของคุณเอง":
         uploaded_file = st.file_uploader("อัพโหลดไฟล์เสียงของคุณเอง", type=["wav", "mp3", "mp4"])
-        if uploaded_file:
-            temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".wav")
+        if uploaded_file is not None:
+            temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
             temp_file.write(uploaded_file.read())
             temp_file.close()
             audio_path = temp_file.name
