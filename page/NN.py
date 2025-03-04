@@ -93,7 +93,9 @@ def modele():
     except Exception as e:
         st.error(f"เกิดข้อผิดพลาดในการทำนายเสียง: {str(e)}")
     
-    if os.path.exists(audio_path):
+    if "temp_file" in locals() and os.path.exists(temp_file.name):
+        os.unlink(temp_file.name)
+    if "audio_path" in locals() and audio_path.startswith("/tmp") and os.path.exists(audio_path):
         os.unlink(audio_path)
 
 # เรียกใช้งาน Streamlit
