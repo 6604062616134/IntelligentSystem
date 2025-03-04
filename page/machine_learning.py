@@ -290,8 +290,8 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         st.code(code, language='python')
         st.markdown('<div class="text_indent">• เราจะใช้ StandardScaler เพื่อปรับขนาดข้อมูลที่เป็นตัวเลขให้มีค่าเฉลี่ย (mean) เท่ากับ 0 และส่วนเบี่ยงเบนมาตรฐาน (standard deviation) เท่ากับ 1 เพื่อให้การพยากรณ์มีประสิทธิภาพมากขึ้น</div><br>', unsafe_allow_html=True)
      
-
         st.markdown('<br><div class="highlight">10. แบ่งข้อมูลเป็นชุดฝึกและชุดทดสอบ</div>', unsafe_allow_html=True)
+       
         code = '''
    X_train, X_test, y_train_temp, y_test_temp = train_test_split(
     X_scaled, y_temp, train_size=0.2, random_state=42
