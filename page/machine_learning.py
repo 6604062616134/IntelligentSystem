@@ -41,13 +41,13 @@ def machine_learning():
     st.markdown('<div class="text_indent"> ข้อมูลความเร็วลมมีบทบาทสำคัญในการพยากรณ์อุณหภูมิ เนื่องจากลมมีผลต่อการกระจายความร้อนในอากาศ เช่น ลมเย็นอาจลดอุณหภูมิในพื้นที่หนึ่งได้หรือช่วยให้ลมร้อนขึ้นในบางพื้นที่ ข้อมูลนี้สามารถนำไปใช้ในการคำนวณหาความรู้สึกของอุณหภูมิที่แท้จริง (Wind Chill) หรือแม้กระทั่งการทำนายปรากฏการณ์อากาศเช่นพายุ การนำข้อมูลนี้มาใช้ในการวิเคราะห์จะทำให้ระบบสามารถพยากรณ์ได้แม่นยำยิ่งขึ้น</div><br>', unsafe_allow_html=True)
    
     st.markdown('<div class="big-font">การเตรียมข้อมูล (Data Preprocessing) </div>', unsafe_allow_html=True)
-    st.markdown('<div class="text_indent"> </div><br>', unsafe_allow_html=True)
+   
     
     st.markdown('<div class="big-font">การจัดการข้อมูลและการเลือกเทคนิคการวิเคราะห์ </div>', unsafe_allow_html=True)
     st.markdown('<div class="highlight"> แหล่งที่มาของข้อมูล (Data Preprocessing)</div>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent">การวิเคราะห์และการสร้างโมเดลที่เกี่ยวข้องกับข้อมูลตลาดหุ้นนั้นต้องอาศัยข้อมูลจำนวนมาก ซึ่งต้องการความถูกต้องและความครบถ้วนของข้อมูลอย่างสูง อย่างไรก็ตาม การเตรียมข้อมูล (Data Preparation) ถือเป็นขั้นตอนที่สำคัญไม่น้อยไปกว่าการพัฒนาโมเดล เพราะข้อมูลที่ไม่สมบูรณ์หรือมีข้อบกพร่องอาจก่อให้เกิดความท้าทายในการทำงาน และส่งผลกระทบต่อคุณภาพของโมเดลที่สร้างขึ้นได้ </div><br>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent"> ในโปรเจกต์นี้ เราจะมาดูวิธีการสร้าง Dataset ที่ใช้ในการพยากรณ์อุณหภูมิ โดยใช้เทคโนโลยี AI เช่น ChatGPT ในการจำลองข้อมูลที่เกี่ยวข้องกับตลาดหุ้น หรือในกรณีนี้คือข้อมูลสภาพอากาศ ซึ่งอาจมีความไม่สมบูรณ์บ้างจากแหล่งข้อมูลจริง การใช้เทคโนโลยี AI เพื่อสร้างข้อมูลจำลองนี้สามารถช่วยเสริมสร้างความเข้าใจและทักษะในการจัดการกับข้อมูลที่มีข้อบกพร่องอย่างมีประสิทธิภาพ เช่น การเติมค่าข้อมูลที่หายไป การตรวจสอบความผิดปกติของข้อมูล และการทำให้ข้อมูลมีความสมบูรณ์ก่อนที่จะนำไปใช้ในการสร้างโมเดลพยากรณ์อุณหภูมิ.</div><br>', unsafe_allow_html=True)
-    st.markdown('<div class="text_indent"> </div><br>', unsafe_allow_html=True)
+  
     st.markdown('<div class="text_indent">การเตรียมข้อมูลที่ดีจะช่วยให้แบบจำลองมีความแม่นยำมากยิ่งขึ้น และสามารถทำนายอุณหภูมิได้อย่างเชื่อถือได้ ซึ่งจะนำไปสู่การพัฒนาเครื่องมือที่ช่วยในการตัดสินใจในหลากหลายด้าน เช่น เกษตรกรรม พลังงาน และการท่องเที่ยวได้อย่างมีประสิทธิภาพ. </div><br>', unsafe_allow_html=True)
     
     st.markdown('<div class="highlight"> การสร้าง Dataset โดยใช้ ChatGPT</div>', unsafe_allow_html=True)
@@ -418,7 +418,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         results_df = pd.DataFrame(result_data)
 
         # แสดงผลการประเมิน
-        
+
         st.markdown('<br><div class="big-font">ผลการประเมินประสิทธิภาพของโมเดล</div>', unsafe_allow_html=True)
         st.dataframe(results_df.style.format({'MAE': '{:.4f}', 'MSE': '{:.4f}', 'R2': '{:.4f}', 'MAPE (%)': '{:.4f}', 'Prediction Accuracy (%)': '{:.4f}'}))
 
