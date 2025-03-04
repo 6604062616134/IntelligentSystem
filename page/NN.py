@@ -11,7 +11,8 @@ import tempfile
 MODEL_URL = 'https://drive.google.com/uc?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d'
 
 # กำหนดพาธสำหรับโมเดล
-
+base = Path(__file__).parent / "NN"
+model_path = base / "model.h5"
 
 # ตรวจสอบว่ามีโมเดลอยู่หรือไม่ ถ้าไม่มีให้ดาวน์โหลด
 if not model_path.exists():
