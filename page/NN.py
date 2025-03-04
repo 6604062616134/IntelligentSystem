@@ -14,9 +14,7 @@ MODEL_URL = 'https://drive.google.com/uc?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d'
 base = Path(__file__).parent / "NN"
 model_path = base / "model.h5"
 
-file_path = Path(__file__).parent.parent / "data NN"
-file_cat = file_path / "cat_115.wav"
-file_dog = file_path / "dog_barking_46.wav"
+
 # ตรวจสอบว่ามีโมเดลอยู่หรือไม่ ถ้าไม่มีให้ดาวน์โหลด
 if not model_path.exists():
     os.makedirs(base, exist_ok=True)
@@ -29,6 +27,9 @@ except Exception as e:
     st.error(f"เกิดข้อผิดพลาดในการโหลดโมเดล: {str(e)}")
     st.stop()
 
+file_path = Path(__file__).parent.parent / "data NN"
+file_cat = file_path / "cat_115.wav"
+file_dog = file_path / "dog_barking_46.wav"
 # ฟังก์ชันโหลดเสียงและแปลงเป็น Mel Spectrogram
 def extract_features(audio_file):
     try:
