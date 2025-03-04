@@ -10,7 +10,7 @@ import tempfile
 
 
     
-MODEL_URL = 'https://drive.google.com/uc?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d'
+MODEL_URL = 'https://drive.usercontent.google.com/download?id=1OzYA4YxjS781ssi_3yQNYiNAgRW4OD2d&export=download&authuser=0&confirm=t&uuid=9ab79fa9-a4e5-4d88-a557-5092d1514473&at=AEz70l6Tqu-HU-J_n_kIWd8Q5J8c:1741102825604'
 
 
 base = Path(__file__).parent.parent / "NN"
