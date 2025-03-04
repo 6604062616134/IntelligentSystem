@@ -41,7 +41,7 @@ def extract_features(audio_file):
 
 # ฟังก์ชันทำนายเสียง
 def modele():
-    file_path = Path(__file__).parent.parent / "data NN"
+    file_path = Path(__file__).parent / "data NN"
     file_cat = file_path / "cat_115.wav"
     file_dog = file_path / "dog_barking_46.wav"
     st.title("ทดสอบการทำนายเสียงแมวและหมา")
