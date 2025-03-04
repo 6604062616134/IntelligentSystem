@@ -89,6 +89,5 @@ def modele():
         os.unlink(audio_path)
 
 # เรียกใช้งาน Streamlit
-if __name__ == "__main__":
-    st.title("Neural Network Model: Cat vs Dog Sound Classification")
+def Neural_Network_Model():
     modele()
