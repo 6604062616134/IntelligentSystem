@@ -68,6 +68,7 @@ def demo():
         pred = (pred_rf + pred_xgb + pred_svm) / 3  # ค่าเฉลี่ยจากทุกโมเดล
 
     # แสดงผลลัพธ์
-    st.write(f"อุณหภูมิที่ทำนายสำหรับ {city}, {country}: {pred[0]:.2f} °C")
+    st.write(f"อุณหภูมิที่ทำนายสำหรับ  {city}, {country}: {pred[0]:.2f} °C" )
+    st.title("Neural Network Model")
     modele()
 
