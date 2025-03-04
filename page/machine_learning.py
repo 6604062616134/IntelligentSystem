@@ -418,6 +418,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         results_df = pd.DataFrame(result_data)
 
         # แสดงผลการประเมิน
+        
         st.markdown('<br><div class="big-font">ผลการประเมินประสิทธิภาพของโมเดล</div>', unsafe_allow_html=True)
         st.dataframe(results_df.style.format({'MAE': '{:.4f}', 'MSE': '{:.4f}', 'R2': '{:.4f}', 'MAPE (%)': '{:.4f}', 'Prediction Accuracy (%)': '{:.4f}'}))
 
