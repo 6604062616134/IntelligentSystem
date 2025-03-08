@@ -49,7 +49,7 @@ def home():
 
    
     st.markdown('<div class="text_indent">Convolutional Neural Networks (CNN) กับการประมวลผลเสียง </div>', unsafe_allow_html=True)
-    st.markdown('<div class="text_indent">CNN ไม่ได้ถูกใช้แค่กับการรู้จำภาพเท่านั้น แต่ยังสามารถนำมาใช้วิเคราะห์และจำแนกเสียงได้ด้วย โดยทำงานร่วมกับการแปลงเสียงเป็น Spectrogram ซึ่งเป็นภาพที่แสดงพลังงานของคลื่นเสียงในแต่ละความถี่ตามเวลา โครงสร้างของ CNN ในการประมวลผลเสียงประกอบด้วย</div><br>', unsafe_allow_html=True)
+    st.markdown('<div class="normal-text">CNN ไม่ได้ถูกใช้แค่กับการรู้จำภาพเท่านั้น แต่ยังสามารถนำมาใช้วิเคราะห์และจำแนกเสียงได้ด้วย โดยทำงานร่วมกับการแปลงเสียงเป็น Spectrogram ซึ่งเป็นภาพที่แสดงพลังงานของคลื่นเสียงในแต่ละความถี่ตามเวลา โครงสร้างของ CNN ในการประมวลผลเสียงประกอบด้วย</div><br>', unsafe_allow_html=True)
     st.image("https://www.guru99.com/images/tensorflow/083018_0542_WhatisDeepl3.png", caption="รูปภาพจาก https://thaiprogrammer.org/deep-learning-%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3/")  
     
     st.markdown('<div class="big-font">การนำ Machine Learing มาประยุกต์ใช้ในการทำโปรเจค</div>', unsafe_allow_html=True)
@@ -68,13 +68,12 @@ def home():
     st.markdown('<div class="text_indent">ในยุคที่เทคโนโลยีการประมวลผลเสียงและการเรียนรู้ของเครื่องมีการพัฒนาอย่างรวดเร็ว การนำ Convolutional Neural Networks (CNN) มาใช้ในการจำแนกเสียงสัตว์เลี้ยง เช่น เสียงของสุนัขและแมว กลายเป็นเครื่องมือที่มีความสำคัญในการแยกแยะและระบุเสียงได้อย่างแม่นยำ โดยปกติแล้ว CNN จะถูกใช้ในงานประมวลผลภาพ แต่ในกรณีนี้ได้มีการนำมาใช้ในการวิเคราะห์เสียงโดยการแปลงสัญญาณเสียงเป็น Spectrogram หรือ MFCCs (Mel-Frequency Cepstral Coefficients) ซึ่งมีลักษณะคล้ายภาพสองมิติ ช่วยให้ CNN สามารถประมวลผลและจำแนกเสียงจากรูปแบบที่แสดงผลได้ดียิ่งขึ้น</div><br>', unsafe_allow_html=True)
     st.markdown('<div class="highlight">กระบวนการและเทคนิคที่ใช้ในการจำแนกเสียง</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="text_indent">ในการจำแนกเสียงของสุนัขและแมวด้วย Convolutional Neural Networks (CNN) จะมีการใช้กระบวนการและเทคนิคต่าง ๆ ที่สำคัญเพื่อให้การทำนายแม่นยำ ได้แก่<br><br>'
-                '🔊 การแปลงสัญญาณเสียงเป็น Spectrogram หรือ MFCCsการแปลงสัญญาณเสียงเป็น Spectrogram หรือ MFCCs ช่วยในการเปลี่ยนเสียงเป็นรูปแบบที่ CNN สามารถประมวลผลได้<br><br>'
-                '🧠 การออกแบบโครงสร้างของ CNNการออกแบบเครือข่าย CNN ที่เหมาะสมเพื่อจำแนกเสียงจากลักษณะของสัญญาณเสียงที่แตกต่างกันระหว่างสุนัขและแมว<br><br>'
-                '📊 การฝึกและประเมินโมเดลการฝึกโมเดลด้วยข้อมูลเสียงที่มีฉลาก (เช่น เสียงของสุนัขและแมว) และการประเมินผลเพื่อให้แน่ใจว่าโมเดลสามารถแยกเสียงได้อย่างแม่นยำ<br><br>'
-                '🔧 การปรับปรุงโมเดลการทดสอบและปรับแต่งโมเดลเพื่อเพิ่มประสิทธิภาพในการจำแนกเสียงให้ดียิ่งขึ้น <br><br></div>', unsafe_allow_html=True)
+    st.markdown('<div class="text_indent">ในการจำแนกเสียงของสุนัขและแมวด้วย Convolutional Neural Networks (CNN) จะมีการใช้กระบวนการและเทคนิคต่าง ๆ ที่สำคัญเพื่อให้การทำนายแม่นยำ ได้แก่</div><br><br>', unsafe_allow_html=True)
 
-    st.markdown('<div class="text_indent"></div><br>', unsafe_allow_html=True)
-    st.markdown('<div class="text_indent"></div><br>', unsafe_allow_html=True)
+    st.markdown('<div class="normal-text">🔊 การแปลงสัญญาณเสียงเป็น Spectrogram หรือ MFCCsการแปลงสัญญาณเสียงเป็น Spectrogram หรือ MFCCs ช่วยในการเปลี่ยนเสียงเป็นรูปแบบที่ CNN สามารถประมวลผลได้    </div><br><br>', unsafe_allow_html=True)    
+    st.markdown('<div class="normal-text">🧠 การออกแบบโครงสร้างของ CNNการออกแบบเครือข่าย CNN ที่เหมาะสมเพื่อจำแนกเสียงจากลักษณะของสัญญาณเสียงที่แตกต่างกันระหว่างสุนัขและแมว</div><br><br>', unsafe_allow_html=True)    
+    st.markdown('<div class="normal-text">📊 การฝึกและประเมินโมเดลการฝึกโมเดลด้วยข้อมูลเสียงที่มีฉลาก (เช่น เสียงของสุนัขและแมว) และการประเมินผลเพื่อให้แน่ใจว่าโมเดลสามารถแยกเสียงได้อย่างแม่นยำ</div><br><br>', unsafe_allow_html=True)    
+    st.markdown('<div class="normal-text">🔧 การปรับปรุงโมเดลการทดสอบและปรับแต่งโมเดลเพื่อเพิ่มประสิทธิภาพในการจำแนกเสียงให้ดียิ่งขึ้น</div><br><br>', unsafe_allow_html=True)    
+
    
   
