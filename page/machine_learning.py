@@ -54,12 +54,13 @@ def machine_learning():
     st.image("https://jobschiangrai.com/storage/uploads/image/5-data-science-and-analytics-jobs-for-freshers.jpg")
     st.markdown('<div class="highlight"> แหล่งที่มาของข้อมูล (Data Preprocessing)</div>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent">การวิเคราะห์และการสร้างโมเดลที่เกี่ยวข้องกับข้อมูลตลาดหุ้นนั้นต้องอาศัยข้อมูลจำนวนมาก ซึ่งต้องการความถูกต้องและความครบถ้วนของข้อมูลอย่างสูง อย่างไรก็ตาม การเตรียมข้อมูล (Data Preparation) ถือเป็นขั้นตอนที่สำคัญไม่น้อยไปกว่าการพัฒนาโมเดล เพราะข้อมูลที่ไม่สมบูรณ์หรือมีข้อบกพร่องอาจก่อให้เกิดความท้าทายในการทำงาน และส่งผลกระทบต่อคุณภาพของโมเดลที่สร้างขึ้นได้ </div><br>', unsafe_allow_html=True)
-    st.image("https://motiongraphicplus.com/wp-content/uploads/2023/09/chat-gpt-logo-09.png")
+
     st.markdown('<div class="text_indent"> ในโปรเจกต์นี้ เราจะมาดูวิธีการสร้าง Dataset ที่ใช้ในการพยากรณ์อุณหภูมิ โดยใช้เทคโนโลยี AI เช่น ChatGPT ในการจำลองข้อมูลที่เกี่ยวข้องกับตลาดหุ้น หรือในกรณีนี้คือข้อมูลสภาพอากาศ ซึ่งอาจมีความไม่สมบูรณ์บ้างจากแหล่งข้อมูลจริง การใช้เทคโนโลยี AI เพื่อสร้างข้อมูลจำลองนี้สามารถช่วยเสริมสร้างความเข้าใจและทักษะในการจัดการกับข้อมูลที่มีข้อบกพร่องอย่างมีประสิทธิภาพ เช่น การเติมค่าข้อมูลที่หายไป การตรวจสอบความผิดปกติของข้อมูล และการทำให้ข้อมูลมีความสมบูรณ์ก่อนที่จะนำไปใช้ในการสร้างโมเดลพยากรณ์อุณหภูมิ.</div><br>', unsafe_allow_html=True)
   
     st.markdown('<div class="text_indent">การเตรียมข้อมูลที่ดีจะช่วยให้แบบจำลองมีความแม่นยำมากยิ่งขึ้น และสามารถทำนายอุณหภูมิได้อย่างเชื่อถือได้ ซึ่งจะนำไปสู่การพัฒนาเครื่องมือที่ช่วยในการตัดสินใจในหลากหลายด้าน เช่น เกษตรกรรม พลังงาน และการท่องเที่ยวได้อย่างมีประสิทธิภาพ. </div><br>', unsafe_allow_html=True)
     
     st.markdown('<div class="highlight"> การสร้าง Dataset โดยใช้ ChatGPT</div>', unsafe_allow_html=True)
+    st.image("https://motiongraphicplus.com/wp-content/uploads/2023/09/chat-gpt-logo-09.png")
     st.markdown('<div class="text_indent">ในการสร้างข้อมูลจำลองในโปรเจกต์นี้ เราได้ใช้ ChatGPT ในการสร้างข้อมูลจำลองจำนวน 250,000 รายการเกี่ยวกับสภาพอากาศของ 7 ประเทศและ 7 เมืองหลวง โดยกำหนดเงื่อนไขให้ข้อมูลมีลักษณะที่ไม่สมบูรณ์ (Incomplete Data) เพื่อให้สามารถนำไปใช้ในการฝึกและปรับปรุงขั้นตอนการเตรียมข้อมูลได้ ข้อมูลที่สร้างขึ้นประกอบด้วยคอลัมน์สำคัญดังนี้ </div><br>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent"> Date: วันที่ที่เกี่ยวข้องกับข้อมูลสภาพอากาศ ข้อมูลนี้บางส่วนอาจมีการขาดหาย (Missing Data) เพื่อจำลองสถานการณ์ที่ข้อมูลบางช่วงเวลาไม่สามารถบันทึกได้</div><br>', unsafe_allow_html=True)
     st.markdown('<div class="text_indent"> Country: ประเทศที่เกี่ยวข้องกับข้อมูลสภาพอากาศ ข้อมูลนี้อาจมีข้อผิดพลาดในการกรอกข้อมูลหรือข้อมูลขาดหายบางส่วน โดยข้อมูลนี้ครอบคลุมถึง 7 ประเทศ ได้แก่ Thailand, UK, USA, South Korea, Japan, France, และ China</div><br>', unsafe_allow_html=True)
@@ -318,6 +319,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         st.markdown('<div class="big-font"> โมเดลที่นำมาใช้</div>', unsafe_allow_html=True)
 
         st.markdown('<div class="highlight">RandomForestRegressor</div>', unsafe_allow_html=True)
+        st.image("https://media5.datahacker.rs/2022/08/26-1024x761.jpg")
         st.markdown('<div class="text_indent">RandomForestRegressor เป็นเครื่องมือที่มีความยืดหยุ่นสูงและสามารถใช้ได้ดีในกรณีที่ข้อมูลมีความหลากหลาย เช่น ข้อมูลเกี่ยวกับอุณหภูมิที่ได้รับจากหลายแหล่งข้อมูล (เช่น อุณหภูมิในอดีต, ความชื้น, ความเร็วลม, ฯลฯ) </div><br>', unsafe_allow_html=True)
         
         st.markdown('<div class="normal-text">การนำไปใช้ในโปรเจค  </div><br>', unsafe_allow_html=True)
@@ -326,6 +328,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         st.markdown('<div class="text_indent">• การทำนาย: เมื่อฝึกโมเดลแล้ว สามารถนำข้อมูลสภาพอากาศที่กำลังเกิดขึ้นในขณะนั้นมาทำนายอุณหภูมิในอนาคต (เช่น อุณหภูมิในวันถัดไป)</div><br>', unsafe_allow_html=True)
 
         st.markdown('<div class="highlight">XGBRegressor ในการทำนายอุณหภูมิ</div>', unsafe_allow_html=True)
+        st.image("https://i.sstatic.net/FHXO6.png")
         st.markdown('<div class="text_indent">XGBRegressor (Extreme Gradient Boosting) เป็นอัลกอริธึมที่มีประสิทธิภาพสูงในการทำนายข้อมูลที่ซับซ้อน โดยสามารถจัดการกับข้อมูลที่ไม่เป็นเชิงเส้นได้ดี ซึ่งเหมาะสมกับการทำนายอุณหภูมิในสภาพแวดล้อมที่มีความผันผวนสูง เช่น การทำนายอุณหภูมิในช่วงเวลาต่างๆ ที่อาจจะได้รับผลกระทบจากหลายปัจจัย </div><br>', unsafe_allow_html=True)
         st.markdown('<div class="normal-text">การนำไปใช้ในโปรเจค  </div><br>', unsafe_allow_html=True)
         st.markdown('<div class="text_indent">• เตรียมข้อมูล: เช่นเดียวกับ Random Forest, ใช้ข้อมูลของอุณหภูมิในอดีตและข้อมูลปัจจัยต่างๆ ที่มีผลต่ออุณหภูมิ (เช่น ความชื้น, ความเร็วลม) เพื่อฝึกโมเดล</div><br>', unsafe_allow_html=True)
@@ -333,6 +336,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         st.markdown('<div class="text_indent">• การทำนาย: สามารถใช้ XGBRegressor ในการทำนายอุณหภูมิในอนาคตโดยใช้ข้อมูลปัจจุบัน (เช่น ความชื้น, ความเร็วลม) และข้อมูลในอดีต</div><br>', unsafe_allow_html=True)
 
         st.markdown('<div class="highlight">Support Vector Regression (SVR) </div>', unsafe_allow_html=True)
+        st.image("https://i0.wp.com/spotintelligence.com/wp-content/uploads/2024/05/support-vector-regression-svr.jpg?fit=1200%2C675&ssl=1")
         st.markdown('<div class="text_indent"> SVR (Support Vector Regression) ใช้แนวคิดจาก Support Vector Machine (SVM) เพื่อหาฟังก์ชันที่สามารถทำนายค่าอุณหภูมิได้ดีที่สุด โดยการหาค่าของ Hyperplane ที่ทำให้ค่าผลลัพธ์ของการทำนายมีความแม่นยำมากที่สุด</div><br>', unsafe_allow_html=True)
         st.markdown('<div class="normal-text">การนำไปใช้ในโปรเจค  </div><br>', unsafe_allow_html=True)
         st.markdown('<div class="text_indent">• เตรียมข้อมูล: ข้อมูลเช่น ความชื้น, ความเร็วลม, ความกดอากาศ, และอุณหภูมิในอดีตจะถูกใช้เป็นฟีเจอร์ในการฝึกโมเดล</div><br>', unsafe_allow_html=True)
@@ -340,6 +344,7 @@ X_scaled = pd.DataFrame(scaler.fit_transform(X_imputed[numeric_cols]), columns=n
         st.markdown('<div class="text_indent">• การทำนาย: เมื่อฝึกโมเดลแล้ว สามารถทำนายอุณหภูมิในอนาคตโดยใช้ข้อมูลต่างๆ ที่ได้จากการเก็บข้อมูลในปัจจุบัน</div><br>', unsafe_allow_html=True)
         
         st.markdown('<div class="highlight">Ensemble Method</div>', unsafe_allow_html=True)
+        st.image("https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/creative-assets/s-migr/ul/g/fc/4f/ensemble-learning-boosting.png")
         st.markdown('<div class="text_indent"> เป็นเทคนิคที่ใช้การรวมหลายโมเดลเพื่อเพิ่มความแม่นยำและประสิทธิภาพในการทำนายผล โดยการนำทั้งสามโมเดลที่ได้กล่าวถึงก่อนหน้า (RandomForestRegressor, XGBRegressor, และ Support Vector Regression (SVR)) มารวมกันจะช่วยเพิ่มความสามารถในการทำนายอุณหภูมิในโปรเจคของคุณ โดยการใช้ Ensemble Methods อย่าง Voting Regressor หรือ Stacking Regressor สามารถช่วยให้โมเดลมีประสิทธิภาพมากยิ่งขึ้นได้ </div><br>', unsafe_allow_html=True)
         st.markdown('<div class="text_indent">ทฤษฎีเบื้องหลัง Ensemble Method (Stacking)Ensemble Learning อาศัยหลักการที่ว่า การรวมหลาย ๆ โมเดลที่มีความแตกต่างกันสามารถช่วยให้ผลลัพธ์ที่ได้มีความแม่นยำมากขึ้น โดยการใช้หลายโมเดลเพื่อทำนายผลลัพธ์จะทำให้สามารถแก้ไขข้อผิดพลาดจากโมเดลใดโมเดลหนึ่งได้ เนื่องจากโมเดลแต่ละตัวอาจจะมีจุดแข็งและจุดอ่อนที่ต่างกัน Stacking เป็นหนึ่งในเทคนิค ensemble ที่ได้รับความนิยม โดยที่ base models หลายตัวจะทำการทำนายผลลัพธ์ และ meta-model จะนำผลลัพธ์จากโมเดลเหล่านั้นมาเรียนรู้เพื่อทำการทำนายที่แม่นยำยิ่งขึ้น การเรียนรู้แบบนี้ช่วยให้ระบบลดความเสี่ยงจากการใช้โมเดลเดียวที่อาจจะมีข้อผิดพลาด หรืออาจจะไม่สามารถจับลักษณะบางอย่างในข้อมูลได้</div><br>', unsafe_allow_html=True)
         st.markdown('<div class="normal-text">การนำไปใช้ในโปรเจค  </div><br>', unsafe_allow_html=True)
