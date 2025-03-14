@@ -1,0 +1,13 @@
+joblib
+scikit-learn
+tensorflow
+numpy
+seaborn
+librosa
+xgboost
+gdown
+
+
+
+
+
